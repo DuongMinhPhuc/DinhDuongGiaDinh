@@ -11,20 +11,20 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Các thức ăn chứa đạm:"
+            android:text="Các loại rau xanh:"
             android:textSize="25dp"/>
-
         <ListView
-            android:id="@+id/lv_dam"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></ListView>
+            android:layout_height="match_parent"
+            android:id="@+id/lv_rau_xanh">
+        </ListView>
     </LinearLayout>
     <RelativeLayout
         android:layout_weight="9"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
-            android:id="@+id/btn_back_dam"
+            android:id="@+id/btn_back_rau_xanh"
             android:layout_alignParentRight="true"
             android:layout_marginRight="16dp"
             android:layout_width="wrap_content"

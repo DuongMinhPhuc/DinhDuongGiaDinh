@@ -11,12 +11,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Các thức ăn chứa chất béo:"
+            android:text="Các thức ăn chứa dầu/mỡ:"
             android:textSize="25dp"/>
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/lv_chat_beo">
+            android:id="@+id/lv_dau_mo">
         </ListView>
     </LinearLayout>
     <RelativeLayout
@@ -24,15 +24,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
-            android:id="@+id/btn_back_chat_beo"
-            android:layout_marginRight="16dp"
+            android:id="@+id/btn_back_dau_mo"
+            android:layout_marginRight="14dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="back"
+            android:layout_marginEnd="14dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="16dp" />
+            android:layout_alignParentEnd="true" />
     </RelativeLayout>
 
 </LinearLayout>

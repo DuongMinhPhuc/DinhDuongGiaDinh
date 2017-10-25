@@ -11,12 +11,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Các thức ăn chứa đường bột:"
+            android:text="các loại lương thực:"
             android:textSize="25dp"/>
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/lv_duong_bot">
+            android:id="@+id/lv_luong_thuc">
         </ListView>
     </LinearLayout>
     <RelativeLayout
@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
-            android:id="@+id/btn_back_duong_bot"
+            android:id="@+id/btn_back_luong_thuc"
             android:layout_alignParentRight="true"
             android:layout_marginRight="16dp"
             android:layout_width="wrap_content"

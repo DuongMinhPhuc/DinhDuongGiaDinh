@@ -13,16 +13,16 @@ import phucduongcom.dinhduonggiadinh.R;
  * Created by phucd on 10/21/2017.
  */
 
-public class Protein extends AppCompatActivity {
+public class Dam extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.protein);
-        Button btnBack = (Button) findViewById(R.id.btn_back_protein);
+        setContentView(R.layout.dam);
+        Button btnBack = (Button) findViewById(R.id.btn_back_dam);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Protein.this, layout3.class);
+                Intent intent = new Intent(Dam.this, Layout3.class);
                 startActivity(intent);
             }
         });

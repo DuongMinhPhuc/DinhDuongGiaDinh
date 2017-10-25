@@ -13,16 +13,16 @@ import phucduongcom.dinhduonggiadinh.R;
  * Created by phucd on 10/21/2017.
  */
 
-public class DuongBot extends AppCompatActivity {
+public class LuongThuc extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.duong_bot);
-        Button btnBack = (Button) findViewById(R.id.btn_back_duong_bot);
+        setContentView(R.layout.luong_thuc);
+        Button btnBack = (Button) findViewById(R.id.btn_back_luong_thuc);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DuongBot.this, layout3.class);
+                Intent intent = new Intent(LuongThuc.this, Layout3.class);
                 startActivity(intent);
             }
         });
