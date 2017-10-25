@@ -3,165 +3,230 @@
     android:orientation="vertical" 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp">    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Đường bột"
-            android:textSize="20sp"/>
-        <TextView
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="protein"
-            android:textSize="20sp"/>
-        <TextView
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="chất xơ"
-            android:textSize="20sp"/>
-        <TextView
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="chất béo"
-            android:textSize="20sp"/>
-    </LinearLayout>
+    android:layout_margin="16dp"
+    android:weightSum="1">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/luong_duong_bot"
+    <TextView
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Lương Thực"
             android:textSize="20sp"/>
-        <TextView
-            android:id="@+id/luong_protein"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"/>
-        <TextView
-            android:id="@+id/luong_chat_xo"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"/>
-        <TextView
-            android:id="@+id/luong_chat_beo"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Rau xanh"
+        android:textSize="20sp" />
+
+    <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quả chính"
+            android:textSize="20sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_Luong_thuc"
+            android:layout_weight="1.16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/tv_rau_xanh"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/tv_qua_chin"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đạm"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dầu/mỡ"
+            android:textSize="20sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/luong_dam"
+            android:layout_weight="0.84"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/luong_dau_mo"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="325dp"
+        android:layout_weight="0.09">
         <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imgbtn_luong_thuc"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:onClick="onClick" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="70sp"
+                    android:text="Lương thực"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imgbtn_rau_xanh"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:onClick="onClick" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="70sp"
+                    android:text="Rau xanh"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/imgbtn_duong_bot"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:onClick="onClick"/>
+                android:id="@+id/imgbtn_qua_chin"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:onClick="onClick" />
 
             <TextView
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="70sp"
-                android:text="Đường Bột"
+                android:text="Quả chính"
                 android:textSize="30sp" />
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_marginBottom="20dp"
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ImageButton
-                android:onClick="onClick"
-                android:id="@+id/imgbtn_protein"
-                android:layout_width="60dp"
-                android:layout_height="60dp" />
-            <TextView
-                android:layout_marginLeft="70sp"
-                android:layout_gravity="center"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="30sp"
-                android:text="Protein"/>
-        </LinearLayout>
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_marginBottom="20dp"
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ImageButton
-                android:onClick="onClick"
-                android:id="@+id/imgbtn_chat_beo"
-                android:layout_width="60dp"
-                android:layout_height="60dp" />
-            <TextView
+                <ImageButton
+                    android:src="@drawable/ga"
+                    android:id="@+id/imgbtn_dam"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:onClick="onClick" />
 
-                android:layout_marginLeft="70sp"
-                android:layout_gravity="center"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="70sp"
+                    android:text="Đạm"
+                    android:textSize="30sp" />
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="30sp"
-                android:text="Chất béo"/>
-        </LinearLayout>
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_marginBottom="20dp"
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ImageButton
-                android:onClick="onClick"
-                android:id="@+id/imgbtn_vitamin"
-                android:layout_width="60dp"
-                android:layout_height="60dp" />
-            <TextView
-                android:layout_marginLeft="70sp"
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="30sp"
-                android:text="Vitamin và khoáng chất"/>
-        </LinearLayout>
+                <ImageButton
+                    android:id="@+id/imgbtn_dau_mo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:onClick="onClick" />
 
-    </LinearLayout>
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="70sp"
+                    android:text="Dầu/mỡ"
+                    android:textSize="30sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
     <RelativeLayout
-        android:layout_marginTop="40dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="140sp"
             android:text="back"
-            android:textSize="20sp"
-            android:layout_marginLeft="140sp"/>
+            android:id="@+id/btn_back_layout3"
+            android:textSize="20sp" />
+
         <Button
-            android:layout_marginLeft="240sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="240sp"
             android:text="next"
-            android:textSize="20sp"/>
+            android:id="@+id/btn_next_layout3"
+            android:textSize="20sp" />
 
     </RelativeLayout>
 
-    
+
 </LinearLayout>
