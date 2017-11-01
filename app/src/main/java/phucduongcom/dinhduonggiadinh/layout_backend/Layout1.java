@@ -1,11 +1,14 @@
 package phucduongcom.dinhduonggiadinh.layout_backend;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -27,6 +30,9 @@ public class Layout1 extends AppCompatActivity {
     private DBUsers dbUsers;
     private CustomAdapterLayout1 customAdapter;
     private List<User> usersList;
+    private User user;
+    public static final String COUNT = "count";
+    public static final String BUNDLE = "bundel";
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout1);
@@ -37,15 +43,48 @@ public class Layout1 extends AppCompatActivity {
         btnLuu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                try{
                 User user = createUser();
                 if (user != null) {
                     dbUsers.addUser(user);
                 }
+                }
+                catch(Exception e){
+                    Toast.makeText(Layout1.this, "Chưa điền đủ thông tin", Toast.LENGTH_SHORT).show();}
                 updateListUsers();
                 setAdapter();
             }
         });
+        lvTaiKhoan.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                user = usersList.get(position);
+                int count = user.getmCount();
+                byExtras(count);
+            }
+        });
+        lvTaiKhoan.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long l) {
+                User user = usersList.get(position);
+                int result = dbUsers.deleteUser(user.getmID());
+                if(result>0){
+                    Toast.makeText(Layout1.this, "Delete successfuly", Toast.LENGTH_SHORT).show();
+                    updateListUsers();
+                }else{
+                    Toast.makeText(Layout1.this, "Delete fail", Toast.LENGTH_SHORT).show();
+                }
+                return false;
+            }
+        });
     }
+    public void byExtras(int count){
+        Intent intent = new Intent(Layout1.this, Layout3.class);
+        intent.putExtra(COUNT,count);
+        startActivity(intent);
+    }
+
+
 
     private void initWidget() {
         edtName = (EditText) findViewById(R.id.edt_name);
@@ -62,6 +101,7 @@ public class Layout1 extends AppCompatActivity {
             lvTaiKhoan.setSelection(customAdapter.getCount()-1);
         }
     }
+
     private User createUser() {
         String name = edtName.getText().toString();
         Integer count = Integer.parseInt(edtCount.getText().toString());

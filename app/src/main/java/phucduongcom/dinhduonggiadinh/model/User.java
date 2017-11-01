@@ -1,10 +1,12 @@
 package phucduongcom.dinhduonggiadinh.model;
 
+import java.io.Serializable;
+
 /**
  * Created by phucd on 10/25/2017.
  */
 
-public class User {
+public class User implements Serializable{
     private String mName;
     private int mCount;
     private int mID;

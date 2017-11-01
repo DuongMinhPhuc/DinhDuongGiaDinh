@@ -73,13 +73,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:id="@+id/luong_dam"
+            android:id="@+id/tv_dam"
             android:layout_weight="0.84"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"/>
         <TextView
-            android:id="@+id/luong_dau_mo"
+            android:id="@+id/tv_dau_mo"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
