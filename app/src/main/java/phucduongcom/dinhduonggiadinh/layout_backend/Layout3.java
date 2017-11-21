@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +33,12 @@ public class Layout3 extends AppCompatActivity {
     private Button btnnext;
     private ListView lvNhomThucPham;
     private List<NhomThucPham> ntpList;
+    private NhomThucPham nhomThucPham;
+    private float canLuongThuc;
+    private float canRauXanh;
+    private float canQuaChin;
+    private float canDam;
+    private float canDauMo;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -55,10 +63,45 @@ public class Layout3 extends AppCompatActivity {
         });
         lvNhomThucPham = (ListView) findViewById(R.id.lv_layout3);
         customlv();
+        lvNhomThucPham.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                nhomThucPham = ntpList.get(position);
+                int id = nhomThucPham.getIDimage();
+                switch (id){
+                    case R.drawable.duongbot:
+                    { Intent intent = new Intent(Layout3.this, LuongThuc.class);
+                        startActivity(intent);
+                        break;}
+                    case R.drawable.rauxanh:
+                    {Intent intent = new Intent(Layout3.this, RauXanh.class);
+                        startActivity(intent);
+                        break;}
+                    case R.drawable.cuqua:
+                    {Intent intent = new Intent(Layout3.this, QuaChin.class);
+                        startActivity(intent);
+                        break;}
+                    case R.drawable.dam:
+                    {Intent intent = new Intent(Layout3.this, Dam.class);
+                        startActivity(intent);
+                        break;}
+                    case R.drawable.daumo:
+                    {Intent intent = new Intent(Layout3.this, DauMo.class);
+                        startActivity(intent);
+                        break;}
+                }
+            }
+        });
+
     }
     public void setDataByExtras(){
         Intent intent = getIntent();
         count = intent.getIntExtra(Layout1.COUNT,0);
+        //chứa số lượng người count
+        canLuongThuc = (float) (count*0.4);
+        canRauXanh = (float) (count * 0.33);
+        canDam = (float) (count * 0.2);
+        canDauMo = (float) (count * 0.02);
     }
     public void customlv(){
         ArrayList<NhomThucPham> arrContact = new ArrayList<>();
@@ -76,6 +119,6 @@ public class Layout3 extends AppCompatActivity {
 
         CustomAdapterLayout3 customAdaper = new CustomAdapterLayout3(this,R.layout.custom_listview_layout3,arrContact);
         lvNhomThucPham.setAdapter(customAdaper);
-
+        ntpList=arrContact;
     }
 }

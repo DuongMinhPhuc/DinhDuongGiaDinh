@@ -50,7 +50,7 @@ public class Layout1 extends AppCompatActivity {
                 }
                 }
                 catch(Exception e){
-                    Toast.makeText(Layout1.this, "Chưa điền đủ thông tin", Toast.LENGTH_SHORT).show();}
+                    Toast.makeText(Layout1.this, "Chưa điền đủ thông tin hoặc điền sai", Toast.LENGTH_SHORT).show();}
                 updateListUsers();
                 setAdapter();
             }

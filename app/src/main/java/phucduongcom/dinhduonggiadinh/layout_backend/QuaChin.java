@@ -14,17 +14,17 @@ import phucduongcom.dinhduonggiadinh.R;
  */
 
 public class QuaChin extends AppCompatActivity {
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+@Override
+protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.qua_chin);
         Button btnBack = (Button) findViewById(R.id.btn_back_qua_chin);
         btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(QuaChin.this, Layout3.class);
-                startActivity(intent);
-            }
+@Override
+public void onClick(View view) {
+        Intent intent = new Intent(QuaChin.this, Layout3.class);
+        startActivity(intent);
+        }
         });
-    }
-}
+        }
+        }

@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         initWidget();
         usersList = dbUsers.getAllUsers();
         setAdapter();
+
         btnLuu.setOnClickListener(new View.OnClickListener(){
 
             @Override
